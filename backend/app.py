@@ -9,6 +9,7 @@ JDS = {}
 RESUMES = {}
 EVALS = {}
 
+
 @app.route("/upload_jd/", methods=["POST"])
 def upload_jd():
     file = request.files["file"]
@@ -26,6 +27,7 @@ def upload_jd():
     JDS[jd_id] = {"text": text, "parsed": parsed}
     return jsonify({"jd_id": jd_id, "parsed": parsed})
 
+
 @app.route("/upload_resume/", methods=["POST"])
 def upload_resume():
     file = request.files["file"]
@@ -41,9 +43,11 @@ def upload_resume():
     EVALS[resume_id] = result
     return jsonify({"resume_id": resume_id, "result": result})
 
+
 @app.route("/get_eval/<resume_id>")
 def get_eval(resume_id):
     return jsonify(EVALS.get(resume_id, {"error": "not found"}))
 
+
 if __name__ == "__main__":
-    app.run(port=8000, debug=True)  # 👈 Flask built-in server
+    app.run(port=5000, debug=True)  # 👈 Flask built-in server
