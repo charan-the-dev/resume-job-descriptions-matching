@@ -1,0 +1,16 @@
+flask
+python-multipart
+pdfplumber
+docx2txt
+spacy
+scikit-learn
+fuzzywuzzy
+python-Levenshtein
+sentence-transformers
+faiss-cpu
+openai
+sqlalchemy
+psycopg2-binary
+pydantic
+streamlit
+transformers
